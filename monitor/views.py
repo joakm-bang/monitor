@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.utils import timezone
-#from django.template import loader
 
 from .models import Computer
 maxTime = 60*5
@@ -11,11 +10,6 @@ maxTime = 60*5
 def activity(request):
     
     computers = Computer.objects.filter()
-    #for computer in computers:
-        #if (timezone.now() - computer.activity < timezone.timedelta(seconds=maxTime)):
-            #computer.color = 'alive'
-        #else:
-            #computer.color = 'dead'
     context = {
         'computers':computers,
         }
