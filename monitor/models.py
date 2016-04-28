@@ -60,10 +60,11 @@ class Computer(models.Model):
 				self.email_sent = False
 				self.save()
 		else:
-			txt = self.computer_name + ' appears to be offline.'
-			self.sendMail(mess=txt, esubject=txt)
-			self.email_sent = True
-			self.save()
+			if not self.email_sent:
+				txt = self.computer_name + ' appears to be offline.'
+				self.sendMail(mess=txt, esubject=txt)
+				self.email_sent = True
+				self.save()
 		return alive
 
 
