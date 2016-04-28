@@ -26,7 +26,7 @@ class Computer(models.Model):
 		smtp_user = environ['PYTHON_MAIL_USER']
 		smtp_pwd = environ['PYTHON_MAIL_PASS']
 		smtp_port = 587
-		smtp_host = 'smtp.gmail.com'
+		smtp_host = environ['PYTHON_MAIL_HOST']
 		smtpserver = smtplib.SMTP(smtp_host, smtp_port)	
 		smtpserver.ehlo()
 		smtpserver.starttls()
