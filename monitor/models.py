@@ -14,7 +14,7 @@ class Computer(models.Model):
         return self.computer_name
     
     def isAlive(self):
-        return (timezone.now() - self.activity < timezone.timedelta(minutes=5))
+        return (timezone.now() - self.activity < timezone.timedelta(minutes=10))
 
 #class Activity(models.Model):
     #computer = models.ForeignKey(Computer, on_delete=models.CASCADE)

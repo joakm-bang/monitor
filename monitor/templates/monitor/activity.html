@@ -7,13 +7,16 @@
 <html>
 	<head>
 		<title>Scraper activity</title>
+		<meta http-equiv="refresh" content="60">
+		<link rel="Bookmark" href="{% static 'monitor/icon.ico' %}"/>
+		<link rel="shortcut icon" href="{% static 'monitor/icon.ico' %}"/>
 	</head>
 	<body>
 		<table>
 			<tr>
 				<th>Computer</th>
 				<th>IP address</th>
-				<th>Latest activity</th>
+				<th>Latest check-in</th>
 			</tr>
 		{% for computer in computers %}
 			<tr class=
