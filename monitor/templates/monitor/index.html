@@ -1,0 +1,10 @@
+
+{% if computer_list %}
+    <ul>
+    {% for computer in computer_list %}
+        <li><a href={% url 'detail'  computer.computer_name }">{{ computer.computer_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No computers have been active.</p>
+{% endif %}

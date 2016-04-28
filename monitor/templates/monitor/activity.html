@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'monitor/style.css' %}" />
+
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Scraper activity</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>Computer</th>
+				<th>IP address</th>
+				<th>Latest activity</th>
+			</tr>
+		{% for computer in computers %}
+			<tr class=
+			{% if computer.isAlive %}
+			"alive"
+			{% else %}
+			"dead"
+			{% endif %}
+			">
+				<td>{{computer.computer_name}}</td>
+				<td>{{computer.ip}}</td>
+				<td>{{computer.activity}}</td>
+			</tr>
+		{% endfor %}
+		</table>
+	</body>
+	
+<html>	
+
+
