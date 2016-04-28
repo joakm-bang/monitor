@@ -4,6 +4,7 @@ from django.db import models
 from django.utils import timezone
 
 from os import environ
+import smtplib
 from email.MIMEMultipart import MIMEMultipart
 from email.Utils import formatdate
 from email.mime.text import MIMEText
