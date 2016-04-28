@@ -56,8 +56,9 @@ class Computer(models.Model):
 	def isAlive(self):
 		alive = (timezone.now() - self.activity < timezone.timedelta(minutes=10))
 		if alive:
-			self.email_sent = False
-			self.save()
+			if self.email_sent:
+				self.email_sent = False
+				self.save()
 		else:
 			txt = self.computer_name + ' appears to be offline.'
 			self.sendMail(mess=txt, esubject=txt)
