@@ -12,6 +12,7 @@ def activity(request):
     computers = Computer.objects.filter()
     context = {
         'computers':computers,
+        'current_time':timezone.now(),
         }
     return render(request, 'monitor/activity.html', context)
 

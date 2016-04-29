@@ -18,6 +18,10 @@
 				<th>IP address</th>
 				<th>Latest check-in</th>
 			</tr>
+			<tr>
+				<td colspan="2">Current time</td>
+				<td>{{current_time}}</td>
+			</tr>
 		{% for computer in computers %}
 			<tr class={% if computer.isAlive %}"alive"{% else %}"dead"{% endif %}">
 				<td>{{computer.computer_name}}</td>
