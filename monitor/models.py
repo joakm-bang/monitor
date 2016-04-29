@@ -53,6 +53,7 @@ class Computer(models.Model):
 		return True    
 
 
+	
 	def isAlive(self):
 		alive = (timezone.now() - self.activity < timezone.timedelta(minutes=10))
 		if alive:
