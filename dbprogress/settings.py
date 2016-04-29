@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'dbprogress.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dbj5t7ii92q1pq',
+        'NAME': 'd6rjh7cctk2006',
         'USER': os.environ['HEROKU_USER'],
         'PASSWORD': os.environ['HEROKU_PASS'],
-        'HOST': 'ec2-54-204-41-46.compute-1.amazonaws.com',
+        'HOST': 'ec2-54-243-196-76.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
